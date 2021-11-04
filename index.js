@@ -27,6 +27,7 @@ const proccessData = () => {
   })
   employeeData.interns.forEach((intern) => {
     let newIntern = new Intern(intern.name, counter, intern.email, intern.school);
+    employees.push(newIntern);
     counter++;
   });
 }
@@ -40,17 +41,43 @@ const promptManager = () => {
     .prompt([{
       type: 'input',
       name: 'name',
-      message: "What is the Manager's name?"
+      message: "What is the Manager's name?",
+      validate: (nameInput) => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log("Please enter the Manager's name!");
+          return false;
+        }
+      },
     },
     {
       type: 'input',
       name: 'email',
-      message: "What is the Manager's email?"
+      message: "What is the Manager's email?",
+      validate: (emailInput) => {
+        let regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (regex.test(emailInput)) {
+          return true;
+        } else {
+          console.log("Please enter a valid email!");
+          return false;
+        }
+      },
     },
     {
       type: 'input',
       name: 'officeNumber',
-      message: "What is the Manager's office number?"
+      message: "What is the Manager's office number?",
+      validate: (officeNumberInput) => {
+        let regex = /^[0-9]*$/;
+        if (regex.test(officeNumberInput)) {
+          return true;
+        } else {
+          console.log("Please enter the Manager's office number(must be an integer)!");
+          return false;
+        }
+      },
     }]).then((data) => {
       employeeData.managers.push(data);
     })
@@ -60,17 +87,42 @@ const promptEngineer = () => {
     .prompt([{
       type: 'input',
       name: 'name',
-      message: "What is the Engineer's name?"
+      message: "What is the Engineer's name?",
+      validate: (nameInput) => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log("Please enter the Engineer's name!");
+          return false;
+        }
+      },
     },
     {
       type: 'input',
       name: 'email',
-      message: "What is the Engineer's email?"
+      message: "What is the Engineer's email?",
+      validate: (emailInput) => {
+        let regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (regex.test(emailInput)) {
+          return true;
+        } else {
+          console.log("Please enter a valid email!");
+          return false;
+        }
+      },
     },
     {
       type: 'input',
       name: 'github',
-      message: "What is the Engineer's github?"
+      message: "What is the Engineer's github?",
+      validate: (githubInput) => {
+        if (githubInput) {
+          return true;
+        } else {
+          console.log("Please enter the Engineer's github!");
+          return false;
+        }
+      },
     },
     {
       type: 'confirm',
@@ -90,17 +142,42 @@ const promptIntern = () => {
     .prompt([{
       type: 'input',
       name: 'name',
-      message: "What is the Intern's name?"
+      message: "What is the Intern's name?",
+      validate: (nameInput) => {
+        if (nameInput) {
+          return true;
+        } else {
+          console.log("Please enter the Intern's name!");
+          return false;
+        }
+      },
     },
     {
       type: 'input',
       name: 'email',
-      message: "What is the Intern's email?"
+      message: "What is the Intern's email?",
+      validate: (emailInput) => {
+        let regex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (regex.test(emailInput)) {
+          return true;
+        } else {
+          console.log("Please enter a valid email!");
+          return false;
+        }
+      },
     },
     {
       type: 'input',
       name: 'school',
-      message: "Where does the intern go to school?"
+      message: "Where does the intern go to school?",
+      validate: (schoolInput) => {
+        if (schoolInput) {
+          return true;
+        } else {
+          console.log("Please enter where the intern attends school!");
+          return false;
+        }
+      },
     },
     {
       type: 'confirm',
