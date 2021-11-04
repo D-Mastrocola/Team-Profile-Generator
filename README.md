@@ -11,7 +11,7 @@ run ```npm install```
 run ```node index```
 
 ## Walkthrough Video
-[Video](https://drive.google.com/file/d/1ZDymDF1AWpn9Hjw_B2mWKpsE_VD_ZyaJ/view?usp=sharing)
+[Video](https://drive.google.com/file/d/17iikLPOlNOvnr24y3e5_uPMTR89GKhHO/view?usp=sharing)
 
 ## User Story
 AS A manager
