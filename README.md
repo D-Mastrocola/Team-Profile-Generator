@@ -8,7 +8,7 @@
 run ```npm install```
 
 ## Usage Instructions
-run ```node index```
+run ```node index``` to run the script and ```npm run test``` to run the test scripts
 
 ## Walkthrough Video
 [Video](https://drive.google.com/file/d/17iikLPOlNOvnr24y3e5_uPMTR89GKhHO/view?usp=sharing)
