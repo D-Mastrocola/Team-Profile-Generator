@@ -1,5 +1,18 @@
 # Team-Profile-Generator
 
+![Screenshot](https://github.com/D-Mastrocola/Team-Profile-Generator/blob/main/assets/screenshot.png)
+
+[Live Output](https://d-mastrocola.github.io/Team-Profile-Generator/dist/)
+
+## Install Instructions
+run ```npm install```
+
+## Usage Instructions
+run ```node index```
+
+## Walkthrough Video
+[Video](https://drive.google.com/file/d/1ZDymDF1AWpn9Hjw_B2mWKpsE_VD_ZyaJ/view?usp=sharing)
+
 ## User Story
 AS A manager
 - I WANT to generate a webpage that displays my team's basic info
